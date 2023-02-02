@@ -1,4 +1,4 @@
-const user = require("../models/user.model");
+let user = require('../models/user.model')
 
 const getAllusers = (req, res) => {
   user.find((err, cruds) => {
@@ -6,11 +6,11 @@ const getAllusers = (req, res) => {
       console.log(err)
     }
     else {
-      console.log('HarrisGando', cruds)
+      console.log('.....', cruds)
       res.json(cruds)
+      res.end()
     }
   })
-
 
 };
 
