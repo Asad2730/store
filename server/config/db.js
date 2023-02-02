@@ -17,7 +17,7 @@ module.exports = function () {
     console.log("mongo connected error " + err);
   });
 
-  mongoose.disconnect("disconnected", function () {
-    console.log("mongo disconnected " + err);
+  mongoose.disconnect("disconnected", function (err) {
+    console.log("mongo disconnected ", err);
   });
 };

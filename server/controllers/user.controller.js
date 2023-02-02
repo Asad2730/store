@@ -1,12 +1,17 @@
-const user = require("./../models/user.route");
+const user = require("../models/user.model");
 
 const getAllusers = (req, res) => {
-  user.find((err, user) => {
+  user.find((err, cruds) => {
     if (err) {
-      res.json(err);
+      console.log(err)
     }
-  });
-  res.json(user);
+    else {
+      console.log('HarrisGando', cruds)
+      res.json(cruds)
+    }
+  })
+
+
 };
 
 const singleuser = (req, res) => {
